@@ -1,0 +1,118 @@
+:root {
+    --primary: #ff9800;
+    --secondary: #4a90e2;
+    --accent: #e91e63;
+    --bg: #f5f5f5;
+    --text: #212121;
+    --card: #fff3e0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background: var(--card);
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}nav a:hover {
+    color: var(--accent);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+    font-family: 'Noto Sans Bengali', 'Segoe UI', Arial, sans-serif;
+}
+
+.bn {
+    font-family: 'Noto Sans Bengali', serif;
+    color: var(--secondary);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+}.gallery img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255,152,0,0.16);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    margin-top: 0.8em;
+    font-weight: bold;
+    transition: background 0.2s;
+}.btn:hover {
+    background: var(--accent);
+}
+
+footer {
+    text-align: center;
+    background: var(--secondary);
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 1em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    header, main, section {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .gallery {
+        justify-content: center;
+    }
+    .gallery img {
+        width: 90px;
+        height: 90px;
+    }
+}
